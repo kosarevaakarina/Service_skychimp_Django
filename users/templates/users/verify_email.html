@@ -1,0 +1,7 @@
+{% autoescape off %}
+Добрый день, {{ user.get_username }}
+    Для завершения регистрации необходимо перейти по ссылке:
+http://89.108.98.89{% url 'users:verify_email' uidb64=uid token=token %}
+
+
+{% endautoescape %}

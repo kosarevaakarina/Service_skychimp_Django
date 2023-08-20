@@ -7,4 +7,4 @@ Deploy to prod:
     - cp $ENT_PROD .env
     - docker-compose -f docker-compose.yml up -d --build
   tags:
-    - skydeploy
+    - deploy

@@ -1,7 +1,6 @@
 stages:
   - deploy
 
-
 Deploy to prod:
   stage: deploy
   script:

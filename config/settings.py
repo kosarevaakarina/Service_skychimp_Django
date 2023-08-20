@@ -12,11 +12,12 @@ load_dotenv()
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['http://0.0.0.0', 'http://*', 'https://*']
+CSRF_TRUSTED_ORIGINS = ['http://0.0.0.0', 'http://89.108.98.89', 'http://*', 'https://*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',

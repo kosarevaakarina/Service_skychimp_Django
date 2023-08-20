@@ -7,4 +7,4 @@ Deploy to prod:
     - cp $ENT_PROD .env
     - bash deployment.sh
   tags:
-    - prod
+    - deploy

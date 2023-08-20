@@ -40,7 +40,6 @@ POSTGRES_HOST_AUTH_METHOD=trust
 
 #Secret_key:
 SECRET_KEY=
-
 #Celery
 CELERY_BROKER_URL=redis://redis:6379
 CELERY_RESULT_BACKEND=redis://redis:6379
@@ -54,7 +53,6 @@ _или_
 docker-compose up -d --build
 ```
 _Второй вариант для запуска в фоновом режиме._
-
 ### Запуск приложения в локальной сети:
 _Для запуска проекта необходимо клонировать репозиторий, создать и активировать виртуальное окружение:_ 
 ```
@@ -72,7 +70,6 @@ _Для работы с переменными окружениями необх
 #Email
 EMAIL_HOST_USER=
 EMAIL_HOST_PASSWORD=
-
 #Cache
 CACHE_ENABLED=True
 CACHES_LOCATION=redis://localhost:6379
@@ -84,17 +81,14 @@ POSTGRES_PASSWORD=
 POSTGRES_HOST=127.0.0.1
 POSTGRES_PORT=5432
 
+
 #Secret_key:
 SECRET_KEY=
-
 #Celery
 CELERY_BROKER_URL=redis://localhost:6379
 CELERY_RESULT_BACKEND=redis://localhost:6379
-```
 _Для запуска проекта необходимо клонировать репозиторий и создать и активировать виртуальное окружение:_ 
-```
 python3 -m venv venv
-
 source venv/bin/activate
 ```
 _Установить зависимости:_
@@ -102,50 +96,35 @@ _Установить зависимости:_
 pip install -r requirements.txt
 ```
 _Для работы с переменными окружениями необходимо создать файл .env и заполнить его согласно файлу .env.sample_
-
 _Выполнить миграции:_
 ```
 python3 manage.py migrate
 ```
 _Для заполнения БД запустить команду:_
-
 ```
 python3 manage.py fill
 ```
-
 _Для создания администратора запустить команду:_
-
 ```
 python3 manage.py csu
 ```
-
 _Для заполнения БД запустить команду:_
-
 ```
 python3 manage.py fill
 ```
-
 _Для запуска redis_:
-
 ```
 redis-cli
 ```
-
 _Для запуска celery:_
-
 ```
 celery -A config worker --loglevel=info
 ```
-
 _Для запуска django-celery-beat:_
-
 ```
 celery -A config beat --loglevel=info
 ```
-
 _Для запуска приложения:_
-
 ```
 python3 manage.py runserver
 ```
-

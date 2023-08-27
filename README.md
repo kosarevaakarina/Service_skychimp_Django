@@ -12,6 +12,8 @@
 * Django
 * PostgreSQL
 * Celery, Redis
+* nginx, gunicorn
+* Docker
 ## Сущности
 * Блог
 * Клиент
